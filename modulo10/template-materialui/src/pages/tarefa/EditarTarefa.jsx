@@ -64,6 +64,7 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
     );
 
     //console.log(`Tarefas Editadas: ` + JSON.stringify(tarefas));
+    alert("Alterado com sucesso!")
     handleCloseEditar();
   };
 
@@ -115,7 +116,7 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                 <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>  
+            <Grid item xs={12}>  
               <FormControl fullWidth>
                 <InputLabel htmlFor="tarefa_recurso">Recurso</InputLabel>
                 <Select
@@ -135,7 +136,7 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>  
+            <Grid item xs={12}>  
               <FormControl fullWidth>
                 <InputLabel htmlFor="tarefa_recurso">Status</InputLabel>
                 <Select
@@ -156,11 +157,11 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
               </FormControl>
             </Grid>
             <Grid container spacing={2} pl={2} mt={2}>
-              <Grid item xs={1}>
-                <Button size="small" variant="contained" onClick={handleEditar}>Salvar</Button>
+              <Grid item xs={2}>
+                <Button size="small" variant="contained" color='success' onClick={handleEditar}>Salvar</Button>
               </Grid>  
-              <Grid item xs={1}>  
-                <Button size="small" variant="outlined" onClick={handleCloseEditar}>Cancelar</Button>  
+              <Grid item xs={2}>  
+                <Button size="small" variant="outlined" color='error' onClick={handleCloseEditar}>Cancelar</Button>  
               </Grid>
             </Grid>  
           </Grid>

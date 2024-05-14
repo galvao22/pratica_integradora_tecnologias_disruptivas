@@ -79,29 +79,30 @@ const ListarTarefa = () => {
         return tarefa.idTarefa !== id;
       }),
     );
+    alert("Excluido com sucesso!")
   };
 
     return(
     <>
     <Card>
         <CardHeader
-          title="Tarefas"
+          title="Bem-vindo as suas Tarefas!"
           subheader="Listagem de Tarefas"
         /> 
         <CardContent>
             <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                 <TableHead>
-                <TableRow>
-                    <TableCell>#</TableCell>
-                    <TableCell>Título</TableCell>
-                    <TableCell align="right">Descrição</TableCell>
-                    <TableCell align="right">Data de Início</TableCell>
-                    <TableCell align="right">Data de Finalização</TableCell>
-                    <TableCell align="right">Status</TableCell>
-                    <TableCell align="right">Recurso</TableCell>
-                    <TableCell align="left"></TableCell>
-                    <TableCell align="left"></TableCell>
+                <TableRow sx={{backgroundColor: "gray"}}>
+                    <TableCell sx={{fontWeight: 900}}>#</TableCell>
+                    <TableCell sx={{fontWeight: 900}}>Título</TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="right">Descrição</TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="right">Data de Início</TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="right">Data de Finalização</TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="right">Status</TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="right">Recurso</TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="left"></TableCell>
+                    <TableCell sx={{fontWeight: 900}} align="left"></TableCell>
                 </TableRow>
                 </TableHead>
                 <TableBody>
@@ -113,7 +114,7 @@ const ListarTarefa = () => {
                       <TableCell component="th" scope="row">
                           {row.idTarefa}
                       </TableCell>
-                      <TableCell component="th" scope="row">
+                      <TableCell component="th" scope="row" sx={{fontWeight: 800}}>
                           {row.tituloTarefa}
                       </TableCell>
                       <TableCell align="right">{row.descricaoTarefa}</TableCell>
@@ -134,8 +135,8 @@ const ListarTarefa = () => {
             </TableContainer>
         </CardContent>
         <CardActions>
-            <Button size="small" variant="contained" onClick={handleOpen}>Criar Tarefa</Button>
-            <Button size="small" variant="outlined">Cancelar</Button>
+            <Button size="small" variant="contained" color='success' onClick={handleOpen}>Criar Tarefa</Button>
+            <Button size="small" color='error' variant="outlined">Cancelar</Button>
       </CardActions> 
     </Card>
     <div>

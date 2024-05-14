@@ -51,6 +51,7 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
         }
       ]);
     //console.log(`Tarefas: ` + JSON.stringify(tarefas));
+    alert("Cadastrado com sucesso!")
     handleClose();
   };
 
@@ -96,13 +97,13 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                   sx={{
                     color:'rgba(0, 0, 0, 0.6)',
                     fontWeight: 400,
-                    paddingLeft:'13px'
+                    paddingLeft:'13px',
                   }} 
                 />
                 <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>  
+            <Grid item xs={12}>  
               <FormControl fullWidth>
                 <InputLabel htmlFor="tarefa_recurso">Recurso</InputLabel>
                 <Select
@@ -122,7 +123,7 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={3}>  
+            <Grid item xs={12}>  
               <FormControl fullWidth>
                 <InputLabel htmlFor="tarefa_recurso">Status</InputLabel>
                 <Select
@@ -143,11 +144,11 @@ const CriarTarefa = ({handleClose, tarefas, setTarefas}) =>{
               </FormControl>
             </Grid>
             <Grid container spacing={2} pl={2} mt={2}>
-              <Grid item xs={1}>
-                <Button size="small" variant="contained" onClick={handleSalvar}>Salvar</Button>
+              <Grid item xs={2}>
+                <Button size="small" variant="contained" color='success' onClick={handleSalvar}>Salvar</Button>
               </Grid>  
-              <Grid item xs={1}>  
-                <Button size="small" variant="outlined" onClick={handleClose}>Cancelar</Button>  
+              <Grid item xs={2}>  
+                <Button size="small" variant="outlined" color='error' onClick={handleClose}>Cancelar</Button>  
               </Grid>
             </Grid>  
           </Grid>

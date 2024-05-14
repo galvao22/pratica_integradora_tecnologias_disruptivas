@@ -1,4 +1,5 @@
 import Header from "./components/header";
+import Login from "./pages/Login";
 import ListarTarefa from "./pages/tarefa/ListarTarefa";
 
 function App() {
